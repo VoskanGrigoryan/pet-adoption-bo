@@ -7,7 +7,7 @@ interface MyButtonProps extends ButtonProps {
 
 export default function MyButton({
   variant = "filled",
-  color = "violet",
+  color = "indigo",
   leftSection,
   rightSection,
   fullWidth = false,

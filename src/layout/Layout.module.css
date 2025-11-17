@@ -1,70 +1,44 @@
 .navbar {
-  height: 100vh;
-  border-width: 0px;
-  width: 300px;
-  padding: var(--mantine-spacing-md);
-  display: flex;
-  flex-direction: column;
-  background-color: var(--mantine-color-dark-7);
+width: 80px;
+height: 100vh;
+padding: var(--mantine-spacing-md);
+display: flex;
+flex-direction: column;
+background-color: var(--mantine-color-indigo-filled);
 }
+
 
 .navbarMain {
-  flex: 1;
+flex: 1;
+margin-top: 40px;
 }
 
-.footer {
-  padding-top: var(--mantine-spacing-sm);
-  margin-top: var(--mantine-spacing-sm);
-  border-top: 1px solid var(--mantine-color-white);
-}
-
-.navTitle {
- padding-bottom: var(--mantine-spacing-sm);
-  margin-bottom: var(--mantine-spacing-sm);
-}
-.title {
-  color: var(--mantine-color-white);
-  font-weight: 600;
-  font-size: 30px;
-  font-style: italic;
-}
 
 .link {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  font-size: var(--mantine-font-size-sm);
-  color: var(--mantine-color-white);
-  padding: var(--mantine-spacing-xs) var(--mantine-spacing-sm);
-  border-radius: var(--mantine-radius-sm);
-  font-weight: 600;
-
-  @mixin hover {
-    background-color: var(--mantine-color-indigo-9);
-    color: var(--mantine-color-white);
-
-    .linkIcon {
-      color: var(--mantine-color-white);
-    }
-  }
-
-  &[data-active] {
-    &,
-    &:hover {
-      box-shadow: var(--mantine-shadow-sm);
-      background-color: var(--mantine-color-white);
-      color: var(--mantine-color-dark-filled);
-
-      .linkIcon {
-        color: var(--mantine-color-dark-filled);
-      }
-    }
-  }
+width: 50px;
+height: 50px;
+border-radius: var(--mantine-radius-md);
+display: flex;
+align-items: center;
+justify-content: center;
+color: var(--mantine-color-white);
 }
 
-.linkIcon {
-  color: var(--mantine-color-dark-1);
-  margin-right: var(--mantine-spacing-sm);
-  width: 25px;
-  height: 25px;
+
+.link:hover {
+background-color: var(--mantine-color-indigo-7);
+}
+
+
+.link[data-active],
+.link[data-active]:hover {
+box-shadow: var(--mantine-shadow-sm);
+background-color: var(--mantine-color-white);
+color: var(--mantine-color-indigo-6);
+}
+
+.mainBody {
+  padding-left: 140px;
+  padding-right: 70px;
+  padding-top: 40px;
 }
