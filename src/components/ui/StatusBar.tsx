@@ -1,4 +1,4 @@
-import { Group, Indicator, Text } from "@mantine/core";
+import { Badge, Chip, Group, Indicator, Text } from "@mantine/core";
 import MyPaper from "../common/MyPaper";
 import { IconBell, IconPaw } from "@tabler/icons-react";
 
@@ -7,7 +7,8 @@ const statusBarItems = [
     title: "Mascotas totales",
     key: "mascotasTotales",
     count: 50,
-    icon: <IconPaw stroke={1} />,
+    // icon: <IconPaw stroke={1} />,
+    icon: "",
   },
   {
     title: "Mascotas reservadas",
@@ -25,7 +26,8 @@ const statusBarItems = [
     title: "Solicitudes pendientes",
     key: "solicitudesPendientes",
     count: 16,
-    icon: <IconBell stroke={1} />,
+    // icon: <IconBell stroke={1} />,
+    icon: "",
   },
   {
     title: "Animales con problemas",
@@ -40,16 +42,16 @@ const StatusBar = () => {
     <MyPaper
       style={{ backgroundColor: "var(--mantine-color-dark-5)", color: "white" }}
     >
-      <Group>
+      <Group gap="lg" justify="center">
         {statusBarItems.map((item) => {
           return (
-            <Group key={item.title}>
-              <Text fw={700}>{item.title} :</Text>
-              <Indicator inline label={12} size={16}>
-                {item.icon}
-              </Indicator>
+            <Group key={item.title} gap={4}>
+              <Text fw={600}>{item.title}:</Text>
+              {/* <Indicator inline label={12} size={16}> */}
+              {/* {item.icon} */}
+              {/* </Indicator> */}
 
-              <Text>{item.count}</Text>
+              <Badge color="indigo" size="md" radius="md">{item.count}</Badge>
             </Group>
           );
         })}
